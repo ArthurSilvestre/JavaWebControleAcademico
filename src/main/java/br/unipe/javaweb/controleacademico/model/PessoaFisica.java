@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class PessoaFisica {
+public class PessoaFisica {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,12 +32,12 @@ public abstract class PessoaFisica {
 	@ManyToOne
 	@JoinColumn(name="endereco_id")
 	private Endereco endereco;
-	
-	public Long getId() {
+
+	public Long getId_PessoaFisica() {
 		return id_PessoaFisica;
 	}
 
-	public void setId(Long id_PessoaFisica) {
+	public void setId_PessoaFisica(Long id_PessoaFisica) {
 		this.id_PessoaFisica = id_PessoaFisica;
 	}
 

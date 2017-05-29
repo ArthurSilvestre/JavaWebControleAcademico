@@ -44,7 +44,7 @@ public class AdministradorRegister {
 		
 		adm = administradorDAO.save(adm);
 
-		Assert.assertNotNull(adm.getId());
+		Assert.assertNotNull(adm.getId_PessoaFisica());
 	}
 	
 	@Test
