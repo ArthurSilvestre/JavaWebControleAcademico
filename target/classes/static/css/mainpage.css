@@ -37,3 +37,25 @@ input:not ([type] ):focus:not ([readonly] )+label, input[type=text]:focus:not
 .btn:hover, .btn-large:hover {
 	background-color: #1250cc;
 }
+
+.input-field input[type=date]:focus+label, .input-field input[type=text]:focus+label,
+	.input-field input[type=email]:focus+label, .input-field input[type=password]:focus+label
+	{
+	color: #1976d2;
+}
+
+.input-field input[type=date]:focus, .input-field input[type=text]:focus,
+	.input-field input[type=email]:focus, .input-field input[type=password]:focus
+	{
+	border-bottom: 1px solid #1976d2;
+	box-shadow: none;
+}
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}

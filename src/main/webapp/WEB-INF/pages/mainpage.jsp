@@ -22,8 +22,7 @@
 	<nav class="nav-extended">
 	<div class="nav-wrapper">
 		<a href="#" class="brand-logo">Controle Academico</a> <a href="#"
-			data-activates="mobile-demo" class="button-collapse"><i
-			class="material-icons">Menu</i></a>
+			class="button-collapse"></a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li>Bem vindo {usuario.nome} ({usuario.tipo})</li>
 			<li><a href="collapsible.html">Sair</a></li>
@@ -46,291 +45,263 @@
 	<!-- Body -->
 
 	<div id="cursos" class="col s12">
-		<h4>
-			Listagem de cursos
-			</h1>
-
-			<div class="row">
-				<form class="col s12">
-					<div class="row">
-						<div class="col s12">
-							Buscar por nome:
-							<div class="input-field inline">
-								<input id="email" type="email" /> <label for="email">Ex:
-									Janio</label>
-							</div>
-							<a class="waves-effect waves-light btn"><i
-								class="material-icons left">search</i>Pesquisar</a>
+		<h4>Listagem de cursos</h4>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="col s12">
+						Buscar por nome:
+						<div class="input-field inline">
+							<input type="text" /> <label for="email">Ex: Janio</label>
 						</div>
+						<a class="waves-effect waves-light btn">Pesquisar</a>
 					</div>
-				</form>
-			</div>
-
-			<a class="waves-effect waves-light btn"><i
-				class="material-icons left">library_add</i>Novo</a>
-
-			<div id="demo">
-				<!-- Responsive table starts here -->
-				<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-				<div class="table-responsive-vertical shadow-z-1">
-					<!-- Table starts here -->
-					<table id="table" class="table table-hover table-mc-light-blue">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Nome</th>
-								<th>Tipo</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<tr>
-								<td>ID</td>
-								<td>NOME</td>
-								<td>TIPO</td>
-							</tr>
-
-						</tbody>
-					</table>
 				</div>
+			</form>
+		</div>
+
+		<a class="waves-effect waves-light btn">Novo</a>
+
+		<div id="demo">
+			<!-- Responsive table starts here -->
+			<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+			<div class="table-responsive-vertical shadow-z-1">
+				<!-- Table starts here -->
+				<table id="table" class="table table-hover table-mc-light-blue">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nome</th>
+							<th>Tipo</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ID</td>
+							<td>NOME</td>
+							<td>TIPO</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
+		</div>
 	</div>
 
 	<div id="disciplinas" class="col s12">
-		<h4>
-			Listagem de disciplinas
-			</h1>
+		<h4>Listagem de disciplinas</h4>
 
-			<div class="row">
-				<form class="col s12">
-					<div class="row">
-						<div class="col s12">
-							Buscar por nome:
-							<div class="input-field inline">
-								<input id="email" type="email" /> <label for="email">Ex:
-									Janio</label>
-							</div>
-							<a class="waves-effect waves-light btn"><i
-								class="material-icons left">search</i>Pesquisar</a>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="col s12">
+						Buscar por nome:
+						<div class="input-field inline">
+							<input type="text" /> <label for="email">Ex: Janio</label>
 						</div>
+						<a class="waves-effect waves-light btn">Pesquisar</a>
 					</div>
-				</form>
-			</div>
-
-			<a class="waves-effect waves-light btn"><i
-				class="material-icons left">library_add</i>Novo</a>
-
-			<div id="demo">
-				<!-- Responsive table starts here -->
-				<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-				<div class="table-responsive-vertical shadow-z-1">
-					<!-- Table starts here -->
-					<table id="table" class="table table-hover table-mc-light-blue">
-						<thead>
-							<tr>
-								<th>Codigo</th>
-								<th>Nome</th>
-								<th>Curso</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<tr>
-								<td>ID</td>
-								<td>NOME</td>
-								<td>NOME DO CURSO</td>
-
-							</tr>
-						</tbody>
-					</table>
 				</div>
+			</form>
+		</div>
+
+		<a class="waves-effect waves-light btn">Novo</a>
+
+		<div id="demo">
+			<!-- Responsive table starts here -->
+			<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+			<div class="table-responsive-vertical shadow-z-1">
+				<!-- Table starts here -->
+				<table id="table" class="table table-hover table-mc-light-blue">
+					<thead>
+						<tr>
+							<th>Codigo</th>
+							<th>Nome</th>
+							<th>Curso</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ID</td>
+							<td>NOME</td>
+							<td>NOME DO CURSO</td>
+
+						</tr>
+					</tbody>
+				</table>
 			</div>
+		</div>
 	</div>
 
 	<div id="turmas" class="col s12">
-		<h4>
-			Listagem de turmas
-			</h1>
+		<h4>Listagem de turmas</h4>
 
-			<div class="row">
-				<form class="col s12">
-					<div class="row">
-						<div class="col s12">
-							Buscar por nome:
-							<div class="input-field inline">
-								<input id="email" type="email"> <label for="email">Ex:
-										Janio</label>
-							</div>
-							Semestre:
-							<div class="input-field inline">
-								<input id="email" type="email"> <label for="email">Ex:
-										Janio</label>
-							</div>
-							Curso:
-							<div class="input-field inline">
-								<select>
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-								</select> <label>Materialize Select</label>
-							</div>
-							<a class="waves-effect waves-light btn"><i
-								class="material-icons left">search</i>Pesquisar</a>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="col s12">
+						Buscar por nome:
+						<div class="input-field inline">
+							<input type="text" /> <label for="email">Ex: Janio</label>
 						</div>
+						Semestre:
+						<div class="input-field inline">
+							<input type="text" /> <label for="email">Ex: Janio</label>
+						</div>
+						Curso:
+						<div class="input-field inline">
+							<select>
+								<option value="0" disabled selected></option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+							</select>
+						</div>
+						<a class="waves-effect waves-light btn">Pesquisar</a>
 					</div>
-				</form>
-			</div>
-
-			<a class="waves-effect waves-light btn"><i
-				class="material-icons left">library_add</i>Novo</a>
-
-			<div id="demo">
-				<!-- Responsive table starts here -->
-				<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-				<div class="table-responsive-vertical shadow-z-1">
-					<!-- Table starts here -->
-					<table id="table" class="table table-hover table-mc-light-blue">
-						<thead>
-							<tr>
-								<th>Codigo</th>
-								<th>Semestre</th>
-								<th>Disciplina</th>
-								<th>Curso</th>
-								<th>Professor</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<tr>
-								<td>ID</td>
-								<td>SEMESTRE</td>
-								<td>DISCIPLINA</td>
-								<td>CURSO</td>
-								<td>PROFESSOR</td>
-							</tr>
-						</tbody>
-					</table>
 				</div>
+			</form>
+		</div>
+
+		<a class="waves-effect waves-light btn">Novo</a>
+
+		<div id="demo">
+			<!-- Responsive table starts here -->
+			<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+			<div class="table-responsive-vertical shadow-z-1">
+				<!-- Table starts here -->
+				<table id="table" class="table table-hover table-mc-light-blue">
+					<thead>
+						<tr>
+							<th>Codigo</th>
+							<th>Semestre</th>
+							<th>Disciplina</th>
+							<th>Curso</th>
+							<th>Professor</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>ID</td>
+							<td>SEMESTRE</td>
+							<td>DISCIPLINA</td>
+							<td>CURSO</td>
+							<td>PROFESSOR</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
+		</div>
 	</div>
 
 	<div id="alunos" class="col s12">
-		<h4>
-			Listagem de disciplinas
-			</h1>
+		<h4>Listagem de disciplinas</h4>
 
-			<div class="row">
-				<form class="col s12">
-					<div class="row">
-						<div class="col s12">
-							Buscar por matricula:
-							<div class="input-field inline">
-								<input id="email" type="email"> <label for="email">Ex:
-										Janio</label>
-							</div>
-							Nome:
-							<div class="input-field inline">
-								<input id="email" type="email"> <label for="email">Ex:
-										Janio</label>
-							</div>
-							<a class="waves-effect waves-light btn"><i
-								class="material-icons left">search</i>Pesquisar</a>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="col s12">
+						Buscar por matricula:
+						<div class="input-field inline">
+							<input id="email" type="email"> <label for="email">Ex:
+									Janio</label>
 						</div>
+						Nome:
+						<div class="input-field inline">
+							<input id="email" type="email"> <label for="email">Ex:
+									Janio</label>
+						</div>
+						<a class="waves-effect waves-light btn">Pesquisar</a>
 					</div>
-				</form>
-			</div>
-
-			<a class="waves-effect waves-light btn"><i
-				class="material-icons left">library_add</i>Novo</a>
-
-			<div id="demo">
-				<!-- Responsive table starts here -->
-				<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-				<div class="table-responsive-vertical shadow-z-1">
-					<!-- Table starts here -->
-					<table id="table" class="table table-hover table-mc-light-blue">
-						<thead>
-							<tr>
-								<th>Matricula</th>
-								<th>Nome</th>
-								<th>Curso</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<tr>
-								<td>MATRICULA</td>
-								<td>NOME</td>
-								<td>NOME CURSO</td>
-							</tr>
-						</tbody>
-					</table>
 				</div>
+			</form>
+		</div>
+
+		<a class="waves-effect waves-light btn">Novo</a>
+
+		<div id="demo">
+			<!-- Responsive table starts here -->
+			<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+			<div class="table-responsive-vertical shadow-z-1">
+				<!-- Table starts here -->
+				<table id="table" class="table table-hover table-mc-light-blue">
+					<thead>
+						<tr>
+							<th>Matricula</th>
+							<th>Nome</th>
+							<th>Curso</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>MATRICULA</td>
+							<td>NOME</td>
+							<td>NOME CURSO</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
+		</div>
 	</div>
 
 	<div id="professores" class="col s12">
-		<h4>
-			Listagem de turmas
-			</h1>
+		<h4>Listagem de turmas</h4>
 
-			<div class="row">
-				<form class="col s12">
-					<div class="row">
-						<div class="col s12">
-							Buscar por nome:
-							<div class="input-field inline">
-								<input id="email" type="email"> <label for="email">Ex:
-										Janio</label>
-							</div>
-							Disciplina:
-							<div class="input-field inline">
-								<select>
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-								</select> <label>Materialize Select</label>
-							</div>
-							<a class="waves-effect waves-light btn"><i
-								class="material-icons left">search</i>Pesquisar</a>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="col s12">
+						Buscar por nome:
+						<div class="input-field inline">
+							<input type="text"/> <label for="email">Ex: Janio</label>
 						</div>
+						Disciplina:
+						<div class="input-field inline">
+							<select>
+								<option value="0" disabled selected></option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+							</select>
+						</div>
+						<a class="waves-effect waves-light btn">Pesquisar</a>
 					</div>
-				</form>
-			</div>
-
-			<a class="waves-effect waves-light btn"><i
-				class="material-icons left">library_add</i>Novo</a>
-
-			<div id="demo">
-				<!-- Responsive table starts here -->
-				<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-				<div class="table-responsive-vertical shadow-z-1">
-					<!-- Table starts here -->
-					<table id="table" class="table table-hover table-mc-light-blue">
-						<thead>
-							<tr>
-								<th>Codigo</th>
-								<th>Professor</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<tr>
-								<td>ID</td>
-								<td>NOME</td>
-							</tr>
-						</tbody>
-					</table>
 				</div>
+			</form>
+		</div>
+
+		<a class="waves-effect waves-light btn">Novo</a>
+
+		<div id="demo">
+			<!-- Responsive table starts here -->
+			<!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+			<div class="table-responsive-vertical shadow-z-1">
+				<!-- Table starts here -->
+				<table id="table" class="table table-hover table-mc-light-blue">
+					<thead>
+						<tr>
+							<th>Codigo</th>
+							<th>Professor</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>ID</td>
+							<td>NOME</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
+		</div>
 	</div>
 
 	<!-- Footer -->
 	<footer class="page-footer">
 	<div class="footer-copyright">
-		<div class="container">Â© 2017 Desenvolvido pelos alunos de CC</div>
+		<div class="container">© 2017.1 Desenvolvido pelos alunos de CC</div>
 	</div>
 	</footer>
 
@@ -343,10 +314,13 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$('select').material_select();
-		});
-		$('select').material_select('destroy');
+
+	  $(document).ready(function() {
+	    $('select').material_select();
+	  });
+	  
+	  $('select').material_select('destroy');
+	  	            
 	</script>
 
 </body>

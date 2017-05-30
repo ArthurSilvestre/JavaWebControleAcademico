@@ -10,7 +10,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class Aluno extends PessoaFisica {
 
 	private Date dataVinculo;
-
+	
 	public Aluno(){}
 	
 	public Date getDataVinculo() {
