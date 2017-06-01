@@ -23,7 +23,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String login(@ModelAttribute("pessoa_fisica") PessoaFisica pessoa_fisica, BindingResult result, ModelMap map, HttpSession session){
-		return "redirect:mainpage";
+		return "redirect:curso/listar";
 	}
 	
 }

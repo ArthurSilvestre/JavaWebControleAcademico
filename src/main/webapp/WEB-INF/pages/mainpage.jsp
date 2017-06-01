@@ -298,12 +298,7 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
-	<footer class="page-footer">
-	<div class="footer-copyright">
-		<div class="container">© 2017.1 Desenvolvido pelos alunos de CC</div>
-	</div>
-	</footer>
+	<jsp:include page="footer.jsp"/>
 
 	<!-- Scripts -->
 	<!-- jQuery Library -->
