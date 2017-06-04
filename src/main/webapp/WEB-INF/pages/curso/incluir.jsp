@@ -22,7 +22,7 @@
 	
 		<div class="row">
 
-		  <form:form modelAttribute="curso" method="POST" action="incluir" class="col s12">
+		  <form:form modelAttribute="curso" method="POST" action="salvar" class="col s12">
 
 		    <div class="row">
 

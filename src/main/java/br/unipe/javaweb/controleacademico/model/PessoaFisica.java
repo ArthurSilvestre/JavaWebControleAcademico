@@ -89,4 +89,7 @@ public class PessoaFisica {
 		this.senha = senha;
 	}
 	
+	public boolean autenticar(String senha){
+		return senha.equals(this.senha);
+	}
 }

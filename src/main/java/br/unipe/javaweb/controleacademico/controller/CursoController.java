@@ -20,7 +20,7 @@ public class CursoController {
 
 	@Autowired
 	private CursoService cursoService;	
-		
+
 	@RequestMapping(value="/listar", method=RequestMethod.GET)
 	public String listar(ModelMap map){
 		map.addAttribute("cursos", cursoService.listar());
@@ -36,8 +36,8 @@ public class CursoController {
 		
 		return "curso/incluir";
 	}
-	
-	@RequestMapping(value="/incluir", method=RequestMethod.POST)
+
+	@RequestMapping(value="/salvar", method=RequestMethod.POST)
 	public String incluir(@ModelAttribute("curso") Curso curso, BindingResult result, ModelMap map, HttpSession session){
 		cursoService.salvar(curso);
 		return "redirect:listar";
@@ -53,7 +53,7 @@ public class CursoController {
 		
 		return "curso/editar";
 	}	
-	
+
 	@RequestMapping(value="/deletar/{id_curso}", method=RequestMethod.GET)
 	public String deletar(@PathVariable("id_curso") Long id_curso, ModelMap map){
 		Curso curso = cursoService.findById(id_curso);

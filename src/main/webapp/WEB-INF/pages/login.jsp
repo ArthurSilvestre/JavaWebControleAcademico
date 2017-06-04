@@ -29,7 +29,7 @@
 	<div id="login-page" class="row">
 		<div class="col s12 z-depth-6 card-panel">
 			<form:form class="login-form" method="POST" action="login"
-				modelAttribute="pessoa_fisica">
+				modelAttribute="usuario">
 				<div class="row">
 					<div class="input-field col s12 center">
 						<img
@@ -58,6 +58,11 @@
 					</div>
 				</div>
 			</form:form>
+			
+			<c:if test="${erro != null}">
+				<div class="card-panel red lighten-4 red-text text-darken-4"><b>Erro!</b> ${erro}</div>
+			</c:if>
+			
 		</div>
 	</div>
 
