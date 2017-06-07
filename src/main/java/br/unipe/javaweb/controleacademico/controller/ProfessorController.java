@@ -3,9 +3,11 @@ package br.unipe.javaweb.controleacademico.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import br.unipe.javaweb.controleacademico.model.Professor;
 import br.unipe.javaweb.controleacademico.service.ProfessorService;
 
 @Controller
@@ -17,6 +19,7 @@ public class ProfessorController {
 	
 	@RequestMapping(value="/listar", method=RequestMethod.GET)
 	public String listar(ModelMap map){
+		map.addAttribute("professores", professorService.listar());
 		return "professor/listar";
 	}
 	
@@ -38,5 +41,16 @@ public class ProfessorController {
 	@RequestMapping(value="/lancarnotas", method=RequestMethod.GET)
 	public String lancarnotas(ModelMap map){
 		return "professor/lancarnotas";
-	}	
+	}
+	
+	@RequestMapping(value="/deletar/{id_pessoafisica}", method=RequestMethod.GET)
+	public String deletar(@PathVariable("id_pessoafisica") Long id_pessoafisica, ModelMap map){
+		Professor professor = professorService.findById(id_pessoafisica);
+		
+		if (professor != null){
+			professorService.deletar(professor);
+		}
+		
+		return "redirect:../listar";
+	}		
 }

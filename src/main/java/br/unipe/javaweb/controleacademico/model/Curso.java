@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Curso {
@@ -27,7 +28,7 @@ public class Curso {
 	@ManyToMany
 	private List<Aluno> alunos;
 	
-	@ManyToMany
+	@OneToMany
 	private List<Disciplina> disciplinas;
 	
 	public Curso(){

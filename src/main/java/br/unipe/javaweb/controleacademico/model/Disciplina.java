@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Disciplina {
@@ -15,6 +16,9 @@ public class Disciplina {
 	private String nome;
 	
 	private String area;
+	
+	@ManyToOne
+	private Curso curso;
 	
 	public Disciplina(){
 		
@@ -42,6 +46,14 @@ public class Disciplina {
 
 	public void setArea(String area) {
 		this.area = area;
+	}
+
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
 	
 }
