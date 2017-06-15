@@ -1,8 +1,12 @@
 package br.unipe.javaweb.controleacademico.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,13 +29,30 @@ public class ProfessorController {
 	
 	@RequestMapping(value="/incluir", method=RequestMethod.GET)
 	public String incluir(ModelMap map){
+		
+		Professor professor = new Professor();
+		
+		map.addAttribute("professor", professor);
+		
 		return "professor/incluir";
 	}
 	
-	@RequestMapping(value="/editar", method=RequestMethod.GET)
-	public String editar(ModelMap map){
-		return "professor/editar";
+	@RequestMapping(value="/salvar", method=RequestMethod.POST)
+	public String incluir(@ModelAttribute("professor") Professor professor, BindingResult result, ModelMap map, HttpSession session){
+		professorService.salvar(professor);
+		return "redirect:listar";
 	}	
+	
+	@RequestMapping(value="/editar/{id_PessoaFisica}", method=RequestMethod.GET)
+	public String editar(@PathVariable("id_PessoaFisica") Long id_PessoaFisica, ModelMap map, HttpSession session){
+		Professor professor = professorService.findById(id_PessoaFisica);
+		
+		if (professor != null){
+			map.addAttribute("professor", professor);
+		}
+		
+		return "professor/editar";
+	}		
 
 	@RequestMapping(value="/disciplinas", method=RequestMethod.GET)
 	public String disciplinas(ModelMap map){

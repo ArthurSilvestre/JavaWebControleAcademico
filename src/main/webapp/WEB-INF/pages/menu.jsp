@@ -19,21 +19,23 @@
     <div class="nav-wrapper blue darken-2">
       <ul class="left hide-on-med-and-down">
       
+      	<c:url var="url" value="../ControleAcademico" />
+      
         <c:if test="${ tipo_usuario == 'Administrador' }">
-	        <li><a href="../curso/listar"      class="btn waves-effect waves-light blue">Cursos</a></li>
-	        <li><a href="../disciplina/listar" class="btn waves-effect waves-light blue">Disciplinas</a></li>
-	        <li><a href="../turma/listar"      class="btn waves-effect waves-light blue">Turmas</a></li>
-	        <li><a href="../aluno/listar"      class="btn waves-effect waves-light blue">Alunos</a></li>
-	        <li><a href="../professor/listar"  class="btn waves-effect waves-light blue">Professores</a></li>
+	        <li><a href="../curso/listar" 	 	class="btn waves-effect waves-light blue">Cursos</a></li>
+	        <li><a href="../disciplina/listar" 	class="btn waves-effect waves-light blue">Disciplinas</a></li>
+	        <li><a href="../turma/listar"		class="btn waves-effect waves-light blue">Turmas</a></li>
+	        <li><a href="../aluno/listar"		class="btn waves-effect waves-light blue">Alunos</a></li>
+	        <li><a href="../professor/listar"	class="btn waves-effect waves-light blue">Professores</a></li>
         </c:if>
         
         <c:if test="${ tipo_usuario == 'Aluno' }">
-	        <li><a href="../aluno/notas"       class="btn waves-effect waves-light blue">Notas</a></li>
-	        <li><a href="../aluno/historico"  class="btn waves-effect waves-light blue">Histórico</a></li>
+	        <li><a href="../aluno/notas"		class="btn waves-effect waves-light blue">Notas</a></li>
+	        <li><a href="../aluno/historico"	class="btn waves-effect waves-light blue">Histórico</a></li>
         </c:if>
         
         <c:if test="${ tipo_usuario == 'Professor' }">
-	        <li><a href="../professor/disciplinas"       class="btn waves-effect waves-light blue">Disciplinas</a></li>
+	        <li><a href="../professor/disciplinas"	class="btn waves-effect waves-light blue">Disciplinas</a></li>
         </c:if>
         
       </ul>

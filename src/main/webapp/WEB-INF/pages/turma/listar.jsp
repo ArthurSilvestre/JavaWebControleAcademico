@@ -46,7 +46,7 @@
 						<td>${turma.professor.nome}</td>
 						<td>
 							<a href="../turma/editar/${turma.id_Turma}" class="btn waves-effect waves-light blue">Editar</a>
-							<a href="../turma/matricular/${turma.id_Turma}" class="btn waves-effect waves-light blue">Matricular</a>
+							<a href="../matriculaTurma/matricular/${turma.id_Turma}" class="btn waves-effect waves-light blue">Matricular</a>
 							<a href="../turma/deletar/${turma.id_Turma}" class="btn waves-effect waves-light red">Deletar</a>
 						</td>
 					</tr>

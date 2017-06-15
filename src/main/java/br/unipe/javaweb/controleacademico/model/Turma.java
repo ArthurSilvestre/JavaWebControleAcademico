@@ -86,5 +86,10 @@ public class Turma {
 	public void setSala(String sala) {
 		this.sala = sala;
 	}
+
+	@Override
+	public String toString() {
+		return id_Turma + " - " + semestre + "/" + ano + " - horario:" + horario + "/sala:" + sala + " Disciplina: " + disciplina.getNome() + " Professor: " + professor.getNome();
+	}
 	
 }
