@@ -39,6 +39,11 @@ public class ProfessorController {
 	
 	@RequestMapping(value="/salvar", method=RequestMethod.POST)
 	public String incluir(@ModelAttribute("professor") Professor professor, BindingResult result, ModelMap map, HttpSession session){
+		
+		if (professor.getId_PessoaFisica() == null){
+			professor.setSenha(professorService.generateRandomPassword());
+		}		
+		
 		professorService.salvar(professor);
 		return "redirect:listar";
 	}	

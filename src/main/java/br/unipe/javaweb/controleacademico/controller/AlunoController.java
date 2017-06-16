@@ -39,6 +39,11 @@ public class AlunoController {
 	
 	@RequestMapping(value="/salvar", method=RequestMethod.POST)
 	public String incluir(@ModelAttribute("aluno") Aluno aluno, BindingResult result, ModelMap map, HttpSession session){
+		
+		if (aluno.getId_PessoaFisica() == null){
+			aluno.setSenha(alunoService.generateRandomPassword());
+		}
+		
 		alunoService.salvar(aluno);
 		return "redirect:listar";
 	}	
