@@ -1,3 +1,8 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,7 +20,32 @@
 	<body>
 		<jsp:include page="../menu.jsp" />
 	
+		<h4>Semestre atual: ${semestre}</h4>
 	
+		<table id="data-table-simple" class="highlight">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Disciplina</th>
+					<th>Curso</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+	
+			<tbody>
+				<c:forEach var="turma" items="${turmas}">
+					<tr>
+						<td>${turma.id_Turma}</td>
+						<td>${turma.disciplina.nome}</td>
+						<td>${turma.disciplina.curso.nome}</td>
+						<td>
+							<a href="../professor/lancarnotas/${turma.id_Turma}" class="btn waves-effect waves-light blue">Lanças Notas</a>
+						</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+			
+		</table>	
 	
 		<jsp:include page="../footer.jsp" />
 		<jsp:include page="../scripts.jsp" />

@@ -30,6 +30,10 @@ public class MatriculaTurma {
 	public MatriculaTurma(){
 		
 	}
+	
+	public float getMedia(){
+		return (getNotaPrimeiroEstagio() + getNotaSegundoEstagio() + getNotaTerceiroEstagio())/3;
+	}
 
 	public Long getId_MatriculaTurma() {
 		return id_MatriculaTurma;

@@ -1,5 +1,7 @@
 package br.unipe.javaweb.controleacademico.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.unipe.javaweb.controleacademico.model.Aluno;
+import br.unipe.javaweb.controleacademico.model.MatriculaTurma;
 import br.unipe.javaweb.controleacademico.service.AlunoService;
+import br.unipe.javaweb.controleacademico.service.MatriculaTurmaService;
 
 @Controller
 @RequestMapping(value="/aluno")
 public class AlunoController {
 
 	@Autowired
-	private AlunoService alunoService;		
+	private AlunoService alunoService;
+	
+	@Autowired
+	private MatriculaTurmaService matriculaTurmaService;	
 	
 	@RequestMapping(value="/listar", method=RequestMethod.GET)
 	public String listar(ModelMap map){
@@ -60,12 +67,21 @@ public class AlunoController {
 	}	
 	
 	@RequestMapping(value="/notas", method=RequestMethod.GET)
-	public String notas(ModelMap map){
+	public String notas(ModelMap map, HttpSession session){
+		
+		List<MatriculaTurma> notasTurmas = matriculaTurmaService.obtemAlunos("2017.1", (Aluno)session.getAttribute("usuario_autenticado"));
+		map.addAttribute("semestre", "2017.1");
+		map.addAttribute("notas_turmas", notasTurmas);
+		
 		return "aluno/notas";
 	}
 	
 	@RequestMapping(value="/historico", method=RequestMethod.GET)
-	public String historico(ModelMap map){
+	public String historico(ModelMap map, HttpSession session){
+		
+		List<MatriculaTurma> notasTurmas = matriculaTurmaService.obtemHistorico((Aluno)session.getAttribute("usuario_autenticado"));
+		map.addAttribute("notas_turmas", notasTurmas);
+		
 		return "aluno/historico";
 	}
 	

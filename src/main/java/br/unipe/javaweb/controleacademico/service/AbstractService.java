@@ -24,6 +24,10 @@ public abstract class AbstractService<DAO extends JpaRepository<Entity, Long>, E
 		return dao.save(entity);
 	}
 	
+	public List<Entity> saveAll(List<Entity> entitys){
+		return dao.save(entitys);
+	}
+	
 	public boolean deletar(Entity entity){
 		try {
 			dao.delete(entity);
