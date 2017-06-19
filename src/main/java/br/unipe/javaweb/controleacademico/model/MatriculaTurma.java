@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class MatriculaTurma {
+public class MatriculaTurma extends Observable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,9 +26,9 @@ public class MatriculaTurma {
 	private float notaTerceiroEstagio;
 	
 	private float notaFinal;
-
+	
 	public MatriculaTurma(){
-		
+		super();
 	}
 	
 	public float getMedia(){
@@ -64,6 +64,11 @@ public class MatriculaTurma {
 	}
 
 	public void setNotaPrimeiroEstagio(float notaPrimeiroEstagio) {
+		if (this.notaPrimeiroEstagio != notaPrimeiroEstagio){
+			if (this.getListeners().isEmpty()) this.addListener(this.aluno);
+			this.notifyListeners("Primerio Estágio");
+		}
+		
 		this.notaPrimeiroEstagio = notaPrimeiroEstagio;
 	}
 
@@ -72,6 +77,11 @@ public class MatriculaTurma {
 	}
 
 	public void setNotaSegundoEstagio(float notaSegundoEstagio) {
+		if (this.notaSegundoEstagio != notaSegundoEstagio){
+			if (this.getListeners().isEmpty()) this.addListener(this.aluno);
+			this.notifyListeners("Segundo Estágio");
+		}
+
 		this.notaSegundoEstagio = notaSegundoEstagio;
 	}
 
@@ -80,6 +90,11 @@ public class MatriculaTurma {
 	}
 
 	public void setNotaTerceiroEstagio(float notaTerceiroEstagio) {
+		if (this.notaTerceiroEstagio != notaTerceiroEstagio){
+			if (this.getListeners().isEmpty()) this.addListener(this.aluno);
+			this.notifyListeners("Terceiro Estágio");
+		}
+
 		this.notaTerceiroEstagio = notaTerceiroEstagio;
 	}
 
@@ -88,6 +103,11 @@ public class MatriculaTurma {
 	}
 
 	public void setNotaFinal(float notaFinal) {
+		if (this.notaFinal != notaFinal){
+			if (this.getListeners().isEmpty()) this.addListener(this.aluno);
+			this.notifyListeners("Final");
+		}
+
 		this.notaFinal = notaFinal;
 	}
 	

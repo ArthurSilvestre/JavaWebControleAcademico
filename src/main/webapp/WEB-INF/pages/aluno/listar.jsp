@@ -18,6 +18,20 @@
 
 	<body>
 		<jsp:include page="../menu.jsp" />
+
+		<div class="row">
+			<form class="col s12">
+			  Filtro:
+		      <div class="input-field inline">
+			      <input type="text" id="input_filter_matricula" onkeyup="filter_two_fields(0, 1,'input_filter_matricula','input_filter_nome','data-table-simple')"/>
+			      <label for="input_filter">Matricula</label>
+	 	      </div>			  
+		      <div class="input-field inline">
+			      <input type="text" id="input_filter_nome" onkeyup="filter_two_fields(0, 1,'input_filter_matricula','input_filter_nome','data-table-simple')"/>
+			      <label for="input_filter">Nome</label>
+	 	      </div>
+			</form>
+		</div>
 	
 		<ul class="left hide-on-med-and-down">
 			<li><a href="../aluno/incluir" class="btn waves-effect waves-light blue">Novo</a></li>	

@@ -20,10 +20,20 @@
 	<body>
 		<jsp:include page="../menu.jsp" />
 		
+		<div class="row">
+			<form class="col s12">
+			  Filtro:
+		      <div class="input-field inline">
+			      <input type="text" id="input_filter" onkeyup="filter(1,'input_filter','data-table-simple')"/>
+			      <label for="input_filter">Nome</label>
+	 	      </div>
+			</form>
+		</div>
+
 		<ul class="left hide-on-med-and-down">
 			<li><a href="../curso/incluir" class="btn waves-effect waves-light blue">Novo</a></li>	
 		</ul>
-		
+				
 		<table id="data-table-simple" class="highlight">
 			<thead>
 				<tr>
@@ -52,6 +62,7 @@
 		
 		<jsp:include page="../footer.jsp" />
 		<jsp:include page="../scripts.jsp" />
+		
 	</body>
 
 </html>

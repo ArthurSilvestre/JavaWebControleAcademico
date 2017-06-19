@@ -20,6 +20,16 @@
 	<body>
 		<jsp:include page="../menu.jsp" />
 
+		<div class="row">
+			<form class="col s12">
+			  Filtro:
+		      <div class="input-field inline">
+			      <input type="text" id="input_filter" onkeyup="filter(1,'input_filter','data-table-simple')"/>
+			      <label for="input_filter">Semestre</label>
+	 	      </div>
+			</form>
+		</div>
+
 		<ul class="left hide-on-med-and-down">
 			<li><a href="../turma/incluir" class="btn waves-effect waves-light blue">Novo</a></li>	
 		</ul>

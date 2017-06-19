@@ -91,9 +91,12 @@ public class ProfessorController {
 		if (turma != null){
 			List<MatriculaTurma> alunosMatriculados = matriculaTurmaService.obtemAlunos(turma);
 			
+			for (MatriculaTurma matriculaTurma : alunosMatriculados) {
+				matriculaTurma.addListener(matriculaTurma.getAluno());
+			}
+			
 			ListOfMatriculaTurma listOfMatriculaTurma = new ListOfMatriculaTurma();
 			listOfMatriculaTurma.setMatriculaTurmas(alunosMatriculados);
-			
 			
 			map.addAttribute("list_of_matricula_turma", listOfMatriculaTurma);
 		}

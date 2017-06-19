@@ -36,6 +36,8 @@
 					<form:input type="hidden" path="matriculaTurmas[${status.index}].id_MatriculaTurma"/>
 					<form:input type="hidden" path="matriculaTurmas[${status.index}].aluno"/>
 					<form:input type="hidden" path="matriculaTurmas[${status.index}].turma"/>
+					<form:input type="hidden" path="matriculaTurmas[${status.index}].listeners"/>
+
 					<tr>
 						<td><form:input type="hidden" path="matriculaTurmas[${status.index}].aluno.id_PessoaFisica"/>${matriculaTurma.aluno.id_PessoaFisica}</td>
 						<td><form:input type="hidden" path="matriculaTurmas[${status.index}].aluno.nome"/>${matriculaTurma.aluno.nome}</td>

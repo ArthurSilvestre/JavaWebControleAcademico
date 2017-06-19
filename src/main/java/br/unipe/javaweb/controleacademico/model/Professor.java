@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@PrimaryKeyJoinColumn(name="id_PessoaFisica")
+@PrimaryKeyJoinColumn(name="id_PessoaFisica") 
 public class Professor extends PessoaFisica {
 
 	private String areaAtuacao;
